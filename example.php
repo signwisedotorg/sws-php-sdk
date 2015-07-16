@@ -43,7 +43,7 @@ $sw->finalizeSignature("my-container.bdoc", $testSignature);
 // Authenticate with Mobile ID
 $userInfo = array("language" => "et", "ssn" => "51001091072", "msisdn" => "37260000007");
 $mobileSession = uniqid('', true);
-$sw->mobileSigning("my-container.bdoc", "my-container.bdoc.tmp", "http://www.example.com/callback.php?mobileSession=" . $mobileSession, $userInfo);
+$sw->mobileSigning("my-container.bdoc", "my-container.bdoc.tmp", "http://www.example.com/mobile-id-callback.php?mobileSession=" . $mobileSession, $userInfo);
 
 // Create a template from .rtf file, then create a document from that template and share it.
 $placeholders = array(
